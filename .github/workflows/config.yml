@@ -9,34 +9,34 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo Stoean Andrei-Cosmin
-      - run: gcc -o main.c
-      - run: ./main.c 5 8
+      - run: gcc -o src/main.c
+      - run: src/main.c 5 8
       - run: |
-            if [ "$(./main.c 5 8)" != "13" ]
+            if [ "$(src/main.c 5 8)" != "13" ]
               then
                 exit 1
             fi 
-      - run: ./main.c -10 6
+      - run: src/main.c -10 6
       - run: |
-            if [ "$(./main.c -10 6)" != "-4" ]
+            if [ "$(src/main.c -10 6)" != "-4" ]
               then
                 exit 1
             fi 
-      - run: ./main.c 59 81
+      - run: src/main.c 59 81
       - run: |
-            if [ "$(./main.c 59 81)" != "140" ]
+            if [ "$(src/main.c 59 81)" != "140" ]
               then
                 exit 1
             fi 
-      - run: ./main.c 100 -100
+      - run: src/main.c 100 -100
       - run: |
-            if [ "$(./main.c 100 -100)" != "0" ]
+            if [ "$(src/main.c 100 -100)" != "0" ]
               then
                 exit 1
             fi 
-      - run: ./main.c -90 -10
+      - run: src/main.c -90 -10
       - run: |
-            if [ "$(./main.c -90 -10)" != "-100" ]
+            if [ "$(src/main.c -90 -10)" != "-100" ]
               then
                 exit 1
             fi

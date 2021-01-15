@@ -39,8 +39,4 @@ jobs:
             if [ "$(./main.c -90 -10)" != "-100" ]
               then
                 exit 1
-<<<<<<< HEAD
-            fi  
-=======
-            fi  
->>>>>>> 8b3b12deec6be16c94d47f9b87b37bb7472afa90
+            fi

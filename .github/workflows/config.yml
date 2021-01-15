@@ -1,4 +1,4 @@
-name: syntax
+name: config
 on: push
 jobs:
   linux:

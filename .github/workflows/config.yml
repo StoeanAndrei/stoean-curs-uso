@@ -11,32 +11,32 @@ jobs:
       - run: echo Stoean Andrei-Cosmin
       - run: gcc -o main src/main.c
       - run: ./main 5 8
-      - run: |
-            if [ "$(./main 5 8)" != "13" ]
-              then
-                exit 1
-            fi 
+      - run: ./main -90 -10
+      - run: ./main 100 -100
+      - run: ./main 59 81
       - run: ./main -10 6
       - run: |
-            if [ "$(./main -10 6)" != "-4" ]
+            if [ "$(./main 4 4)" != "8" ]
               then
                 exit 1
             fi 
-      - run: ./main 59 81
       - run: |
-            if [ "$(./main 59 81)" != "140" ]
+            if [ "$(./main -15 11)" != "-4" ]
               then
                 exit 1
             fi 
-      - run: ./main 100 -100
       - run: |
-            if [ "$(./main 100 -100)" != "0" ]
+            if [ "$(./main -59 -82)" != "-141" ]
               then
                 exit 1
             fi 
-      - run: ./main -90 -10
       - run: |
-            if [ "$(./main -90 -10)" != "-100" ]
+            if [ "$(./main 100 100)" != "200" ]
+              then
+                exit 1
+            fi 
+      - run: |
+            if [ "$(./main 5 5)" != "10" ]
               then
                 exit 1
             fi
